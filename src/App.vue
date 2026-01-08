@@ -31,7 +31,7 @@
         <div class="hero-content">
           <div class="hero-badge">
             <span class="dot"></span>
-            Novo: Integração com Apple Watch
+            Novo: Integração com Apple Watch e Apple Intelligence
           </div>
 
           <h1>
@@ -167,7 +167,7 @@
           <h2 class="section-title">Seu progresso, visível em cada célula</h2>
           <p class="section-desc">
             Inspirado no gráfico de contribuições do GitHub, nosso heatmap transforma dados em motivação.
-            Escolha entre 8 cores vibrantes para personalizar sua experiência.
+            Cada cor representa um hábito a ser medido — seja para melhorar (improvement) ou monitorar excessos.
           </p>
 
           <div style="margin-top: 40px;">
@@ -491,12 +491,18 @@ const features = [
     desc: 'Hábitos sensíveis? Ative o modo discreto para esconder nomes e usar ícones genéricos. Sua privacidade importa.',
     accent: 'teal',
   },
+  {
+    icon: '🧠',
+    title: 'Apple Intelligence',
+    desc: 'Insights inteligentes sobre seus padrões de hábitos. Sugestões personalizadas e resumos automáticos powered by Apple Intelligence.',
+    accent: 'blue',
+  },
 ];
 
 const heatmapBullets = [
   'Cada célula = 1 dia',
   '5 níveis de intensidade',
-  'Visualização por hábito ou geral',
+  'Cada cor = 1 hábito',
   'Histórico de até 1 ano',
 ];
 
