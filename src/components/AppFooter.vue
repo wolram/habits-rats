@@ -41,7 +41,7 @@
             :href="social.href"
             :aria-label="social.label"
           >
-            {{ social.icon }}
+            <component :is="social.icon" :size="20" />
           </a>
         </div>
       </div>
@@ -51,6 +51,7 @@
 
 <script setup>
 import logoUrl from '../assets/brand/full-logo-rainbow-dark.png';
+import { Twitter, Instagram, Video, Linkedin } from 'lucide-vue-next';
 
 const footerColumns = [
   {
@@ -82,20 +83,20 @@ const footerColumns = [
 ];
 
 const socialLinks = [
-  { label: 'X (Twitter)', icon: '𝕏', href: 'https://x.com/habitratsapp' },
+  { label: 'X (Twitter)', icon: Twitter, href: 'https://x.com/habitratsapp' },
   {
     label: 'Instagram',
-    icon: '📷',
+    icon: Instagram,
     href: 'https://instagram.com/habitratsapp',
   },
   {
     label: 'TikTok',
-    icon: '📱',
+    icon: Video,
     href: 'https://tiktok.com/@habitratsapp',
   },
   {
     label: 'LinkedIn',
-    icon: 'in',
+    icon: Linkedin,
     href: 'https://linkedin.com/company/habitratsapp',
   },
 ];

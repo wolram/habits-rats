@@ -11,7 +11,9 @@
                 :key="habit.name"
                 class="watch-habit"
               >
-                <span class="watch-habit-icon">{{ habit.icon }}</span>
+                <span class="watch-habit-icon">
+                  <component :is="habit.icon" :size="20" />
+                </span>
                 <span class="watch-habit-name">{{ habit.name }}</span>
                 <span
                   class="watch-habit-check"
@@ -48,7 +50,9 @@
             :key="feature.title"
             class="watch-feature"
           >
-            <div class="watch-feature-icon">{{ feature.icon }}</div>
+            <div class="watch-feature-icon">
+              <component :is="feature.icon" :size="24" />
+            </div>
             <div>
               <h4 class="watch-feature-title">{{ feature.title }}</h4>
               <p class="watch-feature-desc">{{ feature.desc }}</p>
@@ -61,26 +65,36 @@
 </template>
 
 <script setup>
+import { 
+  Dumbbell, 
+  Droplets, 
+  BookOpen, 
+  Flower2, 
+  Zap, 
+  CircleGauge, 
+  Heart 
+} from 'lucide-vue-next';
+
 const watchHabits = [
-  { icon: '💪', name: 'Treino', done: true },
-  { icon: '💧', name: 'Água', done: true },
-  { icon: '📖', name: 'Leitura', done: false },
-  { icon: '🧘', name: 'Meditação', done: false },
+  { icon: Dumbbell, name: 'Treino', done: true },
+  { icon: Droplets, name: 'Água', done: true },
+  { icon: BookOpen, name: 'Leitura', done: false },
+  { icon: Flower2, name: 'Meditação', done: false },
 ];
 
 const watchFeatures = [
   {
-    icon: '⚡',
+    icon: Zap,
     title: 'Check-in com 1 toque',
     desc: 'Marque hábitos como feitos instantaneamente. Sem fricção, sem desculpas.',
   },
   {
-    icon: '📱',
+    icon: CircleGauge,
     title: 'Complicações',
     desc: 'Veja seu streak atual e hábitos pendentes direto no mostrador do relógio.',
   },
   {
-    icon: '❤️',
+    icon: Heart,
     title: 'HealthKit',
     desc: 'Sincronize automaticamente passos, sono e exercícios do Apple Health.',
   },
