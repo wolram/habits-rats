@@ -17,74 +17,37 @@
           suba de nível e construa streaks que você vai querer manter.
         </p>
 
-                            <div class="hero-actions">
-                              <a
-                                href="https://apps.apple.com/br/app/habitrats/id1234567890"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                @click="triggerConfetti"
-                              >
-                                <img
-                                  src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-                                  alt="Download na App Store"
-                                  class="store-badge"
-                                />
-                              </a>
-                            </div>                </div>
+        <div class="hero-actions">
+          <a
+            href="https://apps.apple.com/br/app/habitrats/id1234567890"
+            target="_blank"
+            rel="noopener noreferrer"
+            @click="triggerConfetti"
+          >
+            <img
+              src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+              alt="Download na App Store"
+              class="store-badge"
+            />
+          </a>
+        </div>
+      </div>
+
       <div class="hero-visual">
         <div class="phone-mockup">
           <div class="phone-frame">
             <div class="phone-screen">
-              <div class="screen-content">
-                <div class="screen-header">
-                  <span class="screen-title">Hoje</span>
-                  <div class="screen-avatar"></div>
-                </div>
-
-                <div class="streak-card">
-                  <div class="streak-label">Streak atual</div>
-                  <div class="streak-value">47 <span>dias</span></div>
-                </div>
-
-                <div class="heatmap-container">
-                  <div class="heatmap-label">Últimas 12 semanas</div>
-                  <div class="heatmap">
-                    <div
-                      v-for="(level, index) in heroHeatmapData"
-                      :key="`hero-${index}`"
-                      class="heatmap-cell"
-                      :style="{
-                        backgroundColor: colorSchemes.green[level],
-                        animationDelay: `${index * 10}ms`,
-                      }"
-                    ></div>
-                  </div>
-                </div>
-
-                <div class="habit-list">
+              <div class="carousel-container">
+                <transition-group name="fade">
                   <div
-                    v-for="habit in heroHabits"
-                    :key="habit.name"
-                    class="habit-item"
+                    v-for="(image, index) in screenshots"
+                    :key="image"
+                    v-show="currentImageIndex === index"
+                    class="carousel-slide"
                   >
-                    <div
-                      class="habit-icon"
-                      :style="{ background: habit.background }"
-                    >
-                      {{ habit.icon }}
-                    </div>
-                    <div class="habit-info">
-                      <div class="habit-name">{{ habit.name }}</div>
-                      <div class="habit-streak">{{ habit.streak }}</div>
-                    </div>
-                    <div
-                      class="habit-check"
-                      :class="{ done: habit.done, pending: !habit.done }"
-                    >
-                      <span v-if="habit.done">✓</span>
-                    </div>
+                    <img :src="image" :alt="`Screenshot ${index + 1}`" />
                   </div>
-                </div>
+                </transition-group>
               </div>
             </div>
           </div>
@@ -115,38 +78,31 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted, onBeforeUnmount } from 'vue';
 import confetti from 'canvas-confetti';
 import streakBadgeUrl from '../assets/brand/badges/streak_100-gold-yellow.png';
 import levelBadgeUrl from '../assets/brand/badges/level_up-gold-red.png';
 
-const heroHabits = [
-  {
-    icon: '💪',
-    name: 'Treino',
-    streak: '🔥 23 dias',
-    background: 'rgba(255, 107, 107, 0.2)',
-    done: true,
-  },
-  {
-    icon: '💧',
-    name: 'Água',
-    streak: '🔥 47 dias',
-    background: 'rgba(84, 160, 255, 0.2)',
-    done: true,
-  },
-  {
-    icon: '📖',
-    name: 'Leitura',
-    streak: '🔥 15 dias',
-    background: 'rgba(168, 85, 247, 0.2)',
-    done: false,
-  },
-];
+// Importando screenshots renomeadas
+import screen1 from '../assets/screenshots/screen-1.png';
+import screen2 from '../assets/screenshots/screen-2.png';
+import screen3 from '../assets/screenshots/screen-3.png';
+import screen4 from '../assets/screenshots/screen-4.png';
+import screen5 from '../assets/screenshots/screen-5.png';
 
-const colorSchemes = {
-  green: ['#161B22', '#0E4429', '#006D32', '#26A641', '#39D353'],
-};
+const screenshots = [screen1, screen2, screen3, screen4, screen5];
+const currentImageIndex = ref(0);
+let carouselInterval;
+
+onMounted(() => {
+  carouselInterval = setInterval(() => {
+    currentImageIndex.value = (currentImageIndex.value + 1) % screenshots.length;
+  }, 4000); // Troca a cada 4 segundos
+});
+
+onBeforeUnmount(() => {
+  clearInterval(carouselInterval);
+});
 
 function triggerConfetti() {
   const end = Date.now() + 1000;
@@ -173,19 +129,47 @@ function triggerConfetti() {
     }
   }());
 }
+</script>
 
-function generateHeatmapData(rows, cols) {
-  const data = [];
-  for (let i = 0; i < rows * cols; i += 1) {
-    const random = Math.random();
-    if (random < 0.15) data.push(0);
-    else if (random < 0.35) data.push(1);
-    else if (random < 0.55) data.push(2);
-    else if (random < 0.8) data.push(3);
-    else data.push(4);
-  }
-  return data;
+<style scoped>
+/* Ajustes para o Carousel */
+.phone-screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: flex; /* Remove espaços brancos extras */
 }
 
-const heroHeatmapData = ref(generateHeatmapData(5, 12));
-</script>
+.carousel-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Transição de Fade */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 1s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>
