@@ -3,8 +3,8 @@
     <div class="cta-container fade-in">
       <h2>Comece sua jornada hoje</h2>
       <p>
-        Junte-se a mais de 50.000 pessoas construindo hábitos melhores com
-        HabitRats.
+        Faça parte do grupo de primeiros usuários construindo hábitos melhores com
+        Habits Rats.
       </p>
 
       <div class="cta-buttons">

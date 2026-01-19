@@ -54,7 +54,7 @@ const featuredPosts = computed(() => blogPosts.slice(0, 3));
   font-weight: 700;
   text-transform: uppercase;
   padding: 4px 10px;
-  border-radius: 10px;
+  border-radius: var(--radius-full);
   letter-spacing: 0.5px;
 }
 </style>

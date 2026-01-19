@@ -96,7 +96,7 @@ import AppFooter from '../components/AppFooter.vue';
 
 const faqs = ref([
   {
-    question: 'O HabitRats é gratuito?',
+    question: 'O Habits Rats é gratuito?',
     answer: 'Sim! Você pode baixar e usar o plano Gratuito para sempre, que inclui até 5 hábitos e recursos essenciais. O plano Premium desbloqueia hábitos ilimitados e estatísticas avançadas.',
     isOpen: false
   },
@@ -107,7 +107,7 @@ const faqs = ref([
   },
   {
     question: 'Como cancelo minha assinatura?',
-    answer: 'Como todas as assinaturas da App Store, você deve cancelar direto no seu iPhone: Ajustes > Seu Nome > Assinaturas > HabitRats > Cancelar.',
+    answer: 'Como todas as assinaturas da App Store, você deve cancelar direto no seu iPhone: Ajustes > Seu Nome > Assinaturas > Habits Rats > Cancelar.',
     isOpen: false
   },
   {

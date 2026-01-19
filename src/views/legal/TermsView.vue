@@ -2,12 +2,12 @@
   <div class="legal-page">
     <AppNavigation />
     <main class="container legal-content">
-      <h1>Termos de Uso - HabitRats</h1>
+      <h1>Termos de Uso - Habits Rats</h1>
       <p class="last-updated">Última atualização: 19 de Janeiro de 2026</p>
 
       <section>
         <p>
-          Bem-vindo ao HabitRats! Ao baixar, instalar ou usar nosso aplicativo,
+          Bem-vindo ao Habits Rats! Ao baixar, instalar ou usar nosso aplicativo,
           você concorda em ficar vinculado a estes Termos de Uso. Leia-os
           atentamente.
         </p>
@@ -16,7 +16,7 @@
       <section>
         <h2>1. O Serviço</h2>
         <p>
-          O HabitRats é uma ferramenta de rastreamento de hábitos que permite
+          O Habits Rats é uma ferramenta de rastreamento de hábitos que permite
           monitorar progresso diário, visualizar estatísticas e integrar com
           dados de saúde.
         </p>
@@ -52,7 +52,7 @@
 
       <section>
         <h2>4. Propriedade Intelectual</h2>
-        <p>Todo o design, código, logotipos e conteúdo do HabitRats são propriedade exclusiva nossa. Você recebe uma licença limitada para uso pessoal.</p>
+        <p>Todo o design, código, logotipos e conteúdo do Habits Rats são propriedade exclusiva nossa. Você recebe uma licença limitada para uso pessoal.</p>
       </section>
 
       <section>

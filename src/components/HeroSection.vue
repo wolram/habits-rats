@@ -17,28 +17,20 @@
           suba de nível e construa streaks que você vai querer manter.
         </p>
 
-        <div class="hero-actions">
-          <a
-            href="https://apps.apple.com/br/app/habitrats/id1234567890"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-              alt="Download na App Store"
-              class="store-badge"
-            />
-          </a>
-        </div>
-
-        <div class="hero-stats">
-          <div v-for="stat in heroStats" :key="stat.label" class="stat">
-            <span class="stat-value">{{ stat.value }}</span>
-            <span class="stat-label">{{ stat.label }}</span>
-          </div>
-        </div>
-      </div>
-
+                            <div class="hero-actions">
+                              <a
+                                href="https://apps.apple.com/br/app/habitrats/id1234567890"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                @click="triggerConfetti"
+                              >
+                                <img
+                                  src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                                  alt="Download na App Store"
+                                  class="store-badge"
+                                />
+                              </a>
+                            </div>                </div>
       <div class="hero-visual">
         <div class="phone-mockup">
           <div class="phone-frame">
@@ -124,14 +116,9 @@
 
 <script setup>
 import { ref } from 'vue';
+import confetti from 'canvas-confetti';
 import streakBadgeUrl from '../assets/brand/badges/streak_100-gold-yellow.png';
 import levelBadgeUrl from '../assets/brand/badges/level_up-gold-red.png';
-
-const heroStats = [
-  { value: '50K+', label: 'Usuários ativos' },
-  { value: '2.5M', label: 'Hábitos completados' },
-  { value: '4.9', label: 'Avaliação App Store' },
-];
 
 const heroHabits = [
   {
@@ -160,6 +147,32 @@ const heroHabits = [
 const colorSchemes = {
   green: ['#161B22', '#0E4429', '#006D32', '#26A641', '#39D353'],
 };
+
+function triggerConfetti() {
+  const end = Date.now() + 1000;
+  const colors = ['#39D353', '#00D2D3', '#54A0FF', '#A855F7', '#FF6B9D', '#FF6B6B', '#FF9F43', '#FECA57'];
+
+  (function frame() {
+    confetti({
+      particleCount: 3,
+      angle: 60,
+      spread: 55,
+      origin: { x: 0 },
+      colors: colors
+    });
+    confetti({
+      particleCount: 3,
+      angle: 120,
+      spread: 55,
+      origin: { x: 1 },
+      colors: colors
+    });
+
+    if (Date.now() < end) {
+      requestAnimationFrame(frame);
+    }
+  }());
+}
 
 function generateHeatmapData(rows, cols) {
   const data = [];

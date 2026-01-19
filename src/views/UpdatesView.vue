@@ -7,7 +7,7 @@
       <header class="updates-header fade-in">
         <div class="section-label">🚀 Changelog</div>
         <h1>Atualizações & Novidades</h1>
-        <p>Acompanhe a evolução do HabitRats. Estamos apenas começando.</p>
+        <p>Acompanhe a evolução do Habits Rats. Estamos apenas começando.</p>
       </header>
 
       <div class="timeline">
@@ -20,7 +20,7 @@
             <span class="release-date">19 de Janeiro de 2026</span>
             <h2>Lançamento Oficial 🚀</h2>
             <p>
-              Hoje marca o início da nossa jornada. O HabitRats v1.0 chega à App Store com a missão de transformar a construção de hábitos em algo visível e gratificante.
+              Hoje marca o início da nossa jornada. O Habits Rats v1.0 chega à App Store com a missão de transformar a construção de hábitos em algo visível e gratificante.
             </p>
             
             <h3>Principais Recursos:</h3>

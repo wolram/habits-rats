@@ -5,7 +5,7 @@
 
     <main class="container">
       <div class="blog-header fade-in">
-        <div class="section-label">📝 Blog HabitRats</div>
+        <div class="section-label">📝 Blog Habits Rats</div>
         <h1>Conhecimento para sua evolução</h1>
         <p>
           Dicas práticas, ciência e estratégias para dominar seus hábitos em
@@ -170,7 +170,7 @@ p {
   border: 1px solid var(--bg-tertiary);
   color: var(--text-secondary);
   padding: 8px 16px;
-  border-radius: 20px;
+  border-radius: var(--radius-full);
   font-family: var(--font-display);
   font-size: 14px;
   cursor: pointer;
@@ -215,7 +215,7 @@ p {
 .post-card {
   background: var(--bg-secondary);
   border: 1px solid var(--bg-tertiary);
-  border-radius: 20px;
+  border-radius: var(--radius-lg);
   padding: 32px;
   display: flex;
   flex-direction: column;
@@ -257,7 +257,7 @@ p {
   font-weight: 700;
   text-transform: uppercase;
   padding: 4px 10px;
-  border-radius: 10px;
+  border-radius: var(--radius-full);
   letter-spacing: 0.5px;
 }
 

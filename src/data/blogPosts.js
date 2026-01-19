@@ -92,7 +92,7 @@ export const blogPosts = [
     content: `
       <p>Para perder peso, você precisa consumir menos energia do que gasta. É a lei da termodinâmica. Mas dizer "coma menos e mova-se mais" é como dizer a uma pessoa pobre "ganhe mais e gaste menos". Tecnicamente correto, mas não ajuda muito.</p>
       <h2>Calculando sua TMB</h2>
-      <p>Use o HabitRats para estimar sua Taxa Metabólica Basal. A partir daí, crie um déficit moderado de 300 a 500 calorias.</p>
+      <p>Use o Habits Rats para estimar sua Taxa Metabólica Basal. A partir daí, crie um déficit moderado de 300 a 500 calorias.</p>
       <p>Déficits muito agressivos levam à perda de massa muscular, queda no metabolismo e compulsão alimentar. A chave é a paciência.</p>
     `
   },
@@ -136,7 +136,7 @@ export const blogPosts = [
         <li>Menor tempo de descanso.</li>
         <li>Melhor técnica (execução mais lenta e controlada).</li>
       </ol>
-      <p>O HabitRats ajuda você a registrar essas métricas para garantir que a curva esteja sempre subindo.</p>
+      <p>O Habits Rats ajuda você a registrar essas métricas para garantir que a curva esteja sempre subindo.</p>
     `
   },
   {
@@ -172,7 +172,7 @@ export const blogPosts = [
     content: `
       <p>Nossos corpos não foram projetados para ficar dobrados em forma de "L" por 10 horas seguidas. O sedentarismo prolongado afeta a circulação, a postura e o metabolismo da glicose.</p>
       <p>Estudos indicam que pausas frequentes são cruciais. Levantar-se por 5 minutos a cada hora pode reativar a produção de enzimas que quebram gordura.</p>
-      <p>Use o alerta de "Ficar em Pé" do seu Apple Watch ou HabitRats para se lembrar de esticar as pernas.</p>
+      <p>Use o alerta de "Ficar em Pé" do seu Apple Watch ou Habits Rats para se lembrar de esticar as pernas.</p>
     `
   },
   {
@@ -327,7 +327,7 @@ export const blogPosts = [
     content: `
       <p>Caminhar no plano é ótimo, mas caminhar inclinado (subindo) é transformador. A inclinação recruta muito mais a cadeia posterior (glúteos e isquiotibiais) do que a caminhada plana.</p>
       <p>Além disso, o retorno venoso das pernas para o coração é estimulado, ajudando na circulação e prevenindo varizes.</p>
-      <p>Rastreie quantos andares você sobe por dia com o HabitRats (usando dados do barômetro do iPhone/Watch) e tente bater seu recorde.</p>
+      <p>Rastreie quantos andares você sobe por dia com o Habits Rats (usando dados do barômetro do iPhone/Watch) e tente bater seu recorde.</p>
     `
   },
 ];

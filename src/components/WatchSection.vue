@@ -18,10 +18,10 @@
                   :style="
                     habit.done
                       ? {
-                          background: 'var(--green)',
+                          background: 'var(--brand-green)',
                           color: 'var(--bg-primary)',
                         }
-                      : { border: '2px solid var(--bg-tertiary)' }
+                      : { border: '1px solid var(--bg-tertiary)' }
                   "
                 >
                   <span v-if="habit.done">✓</span>

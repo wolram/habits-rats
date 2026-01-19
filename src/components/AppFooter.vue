@@ -4,7 +4,7 @@
       <div class="footer-top">
         <div class="footer-brand">
           <router-link to="/" class="logo">
-            <img class="logo-image" :src="logoUrl" alt="HabitRats" />
+            <img class="logo-image" :src="logoUrl" alt="Habits Rats" />
           </router-link>
           <p>
             Transforme consistência em progresso visível. Rastreie hábitos,
@@ -31,7 +31,7 @@
 
       <div class="footer-bottom">
         <span class="footer-copy"
-          >© {{ new Date().getFullYear() }} HabitRats. Todos os direitos reservados.</span
+          >© {{ new Date().getFullYear() }} Habits Rats. Todos os direitos reservados.</span
         >
 
         <div class="footer-social">

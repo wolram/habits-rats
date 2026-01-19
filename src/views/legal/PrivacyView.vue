@@ -2,12 +2,12 @@
   <div class="legal-page">
     <AppNavigation />
     <main class="container legal-content">
-      <h1>Política de Privacidade - HabitRats</h1>
+      <h1>Política de Privacidade - Habits Rats</h1>
       <p class="last-updated">Última atualização: 19 de Janeiro de 2026</p>
 
       <section>
         <p>
-          Esta Política de Privacidade descreve como o HabitRats ("nós", "nosso"
+          Esta Política de Privacidade descreve como o Habits Rats ("nós", "nosso"
           ou "App") coleta, usa, armazena e protege suas informações pessoais.
           Ao usar nosso aplicativo, você concorda com as práticas descritas
           nesta política.

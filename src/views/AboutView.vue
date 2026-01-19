@@ -13,7 +13,7 @@
           <p class="hero-text">
             A maioria dos apps de hábitos foi feita para robôs, não para humanos. 
             Nós falhamos. Nós esquecemos. E isso não deveria zerar nosso progresso. 
-            O HabitRats nasceu para celebrar a consistência imperfeita.
+            O Habits Rats nasceu para celebrar a consistência imperfeita.
           </p>
         </div>
       </section>
@@ -21,16 +21,16 @@
       <!-- Stats Grid -->
       <section class="stats-section fade-in">
         <div class="stat-card">
-          <span class="stat-number">3+</span>
-          <span class="stat-label">Anos de Pesquisa</span>
+          <span class="stat-number">v1.0</span>
+          <span class="stat-label">Lançamento Oficial</span>
         </div>
         <div class="stat-card highlight-card">
           <span class="stat-number">100%</span>
-          <span class="stat-label">Foco em Privacidade</span>
+          <span class="stat-label">Privacidade Local</span>
         </div>
         <div class="stat-card">
-          <span class="stat-number">∞</span>
-          <span class="stat-label">Tentativas Aceitas</span>
+          <span class="stat-number">Apple</span>
+          <span class="stat-label">Ecosystem Ready</span>
         </div>
       </section>
 

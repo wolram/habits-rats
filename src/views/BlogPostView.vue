@@ -26,7 +26,7 @@
 
         <div class="post-footer-cta">
           <h3>Gostou deste artigo?</h3>
-          <p>Comece a rastrear seus hábitos hoje mesmo com o HabitRats.</p>
+          <p>Comece a rastrear seus hábitos hoje mesmo com o Habits Rats.</p>
           <a href="https://apps.apple.com/br/app/habitrats/id1234567890" class="btn btn-primary">
             Baixar App
           </a>

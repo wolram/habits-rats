@@ -6,9 +6,9 @@
       <p class="last-updated">Última atualização: 19 de Janeiro de 2026</p>
 
       <section>
-        <h2>O HabitRats usa cookies?</h2>
+        <h2>O Habits Rats usa cookies?</h2>
         <p>
-          O HabitRats é um aplicativo nativo para iOS e, portanto, <strong>não utiliza cookies tradicionais de navegador</strong> para rastrear sua atividade dentro do aplicativo.
+          O Habits Rats é um aplicativo nativo para iOS e, portanto, <strong>não utiliza cookies tradicionais de navegador</strong> para rastrear sua atividade dentro do aplicativo.
         </p>
       </section>
 
