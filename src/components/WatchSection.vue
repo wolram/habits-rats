@@ -100,3 +100,154 @@ const watchFeatures = [
   },
 ];
 </script>
+
+<style scoped>
+/* ============================================
+   WATCH SECTION
+============================================ */
+.watch-section {
+  padding: 100px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.watch-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.watch-mockup {
+  width: 300px;
+  height: 360px;
+  background: var(--bg-tertiary);
+  border-radius: 64px;
+  padding: 16px;
+  position: relative;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+  margin: 0 auto;
+}
+
+.watch-mockup::before {
+  content: '';
+  position: absolute;
+  right: -10px;
+  top: 80px;
+  width: 8px;
+  height: 48px;
+  background: var(--bg-elevated);
+  border-radius: 4px;
+}
+
+.watch-screen {
+  width: 100%;
+  height: 100%;
+  background: var(--bg-primary);
+  border-radius: 48px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.watch-time {
+  font-size: 48px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.watch-habits {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.watch-habit {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+}
+
+.watch-habit-icon {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.watch-habit-name {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.watch-habit-check {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.watch-features {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.watch-feature {
+  display: flex;
+  gap: 20px;
+}
+
+.watch-feature-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: var(--brand-blue);
+  flex-shrink: 0;
+}
+
+.watch-feature-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.watch-feature-desc {
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 1024px) {
+  .watch-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .watch-mockup {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .watch-section {
+    padding: 80px 20px;
+  }
+}
+</style>

@@ -26,3 +26,73 @@
     </div>
   </section>
 </template>
+
+<style scoped>
+/* ============================================
+   CTA SECTION
+============================================ */
+.cta {
+  padding: 100px 40px;
+  text-align: center;
+}
+
+.cta-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--bg-secondary);
+  padding: 64px;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--bg-tertiary);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--brand-green),
+    var(--brand-teal),
+    var(--brand-purple),
+    var(--brand-green)
+  );
+  background-size: 200% 100%;
+  animation: rainbowSlide 4s linear infinite;
+}
+
+@keyframes rainbowSlide {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+.cta h2 {
+  font-size: clamp(32px, 4vw, 48px);
+  margin-bottom: 16px;
+}
+
+.cta p {
+  font-size: 18px;
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .cta {
+    padding: 80px 20px;
+  }
+}
+</style>

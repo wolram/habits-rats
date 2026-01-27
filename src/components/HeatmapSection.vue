@@ -33,7 +33,7 @@
               :key="item"
               style="display: flex; align-items: center; gap: 12px"
             >
-              <span style="color: var(--green)">✓</span>
+              <span style="color: var(--brand-green)">✓</span>
               {{ item }}
             </li>
           </ul>
@@ -149,3 +149,114 @@ function setColor(colorKey) {
   demoHeatmapData.value = generateHeatmapData(7, 20);
 }
 </script>
+
+<style scoped>
+/* ============================================
+   HEATMAP SECTION
+============================================ */
+.heatmap-section {
+  padding: 100px 40px;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--bg-tertiary);
+  border-bottom: 1px solid var(--bg-tertiary);
+}
+
+.heatmap-showcase {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.heatmap-demo {
+  background: var(--bg-primary);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  border: 1px solid var(--bg-tertiary);
+}
+
+.heatmap-demo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.heatmap-demo-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.color-picker {
+  display: flex;
+  gap: 8px;
+}
+
+.color-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s;
+  border: 2px solid transparent;
+}
+
+.color-dot:hover {
+  transform: scale(1.1);
+}
+
+.color-dot.active {
+  border-color: var(--text-primary);
+}
+
+.heatmap-large {
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  gap: 4px;
+}
+
+.heatmap-large .heatmap-cell {
+  aspect-ratio: 1;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.heatmap-legend {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+  justify-content: center;
+}
+
+.legend-label {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.legend-colors {
+  display: flex;
+  gap: 4px;
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+}
+
+@media (max-width: 1024px) {
+  .heatmap-showcase {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .heatmap-section {
+    padding: 80px 20px;
+  }
+}
+</style>
