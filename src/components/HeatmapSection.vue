@@ -1,5 +1,5 @@
 <template>
-  <section class="heatmap-section" id="heatmap">
+  <section id="heatmap" class="heatmap-section">
     <div class="heatmap-showcase">
       <div class="section-header" style="text-align: left; margin: 0">
         <div class="section-label">📊 Visualização</div>
@@ -56,10 +56,10 @@
               :style="{ background: `var(--${option.key})` }"
               :aria-label="`Cor ${option.key}`"
               :aria-pressed="currentColor === option.key"
+              type="button"
               @click="setColor(option.key)"
               @keydown.enter="setColor(option.key)"
               @keydown.space.prevent="setColor(option.key)"
-              type="button"
             ></button>
           </div>
         </div>

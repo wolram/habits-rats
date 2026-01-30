@@ -1,5 +1,5 @@
 <template>
-  <section class="pricing" id="pricing">
+  <section id="pricing" class="pricing">
     <div class="section-header fade-in">
       <div class="section-label">💰 Preços</div>
       <h2 class="section-title">Simples e transparente</h2>

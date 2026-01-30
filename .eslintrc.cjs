@@ -4,6 +4,7 @@ module.exports = {
     es2021: true,
     node: true,
   },
+  ignorePatterns: ['dist/**', 'node_modules/**'],
   parser: 'vue-eslint-parser',
   parserOptions: {
     ecmaVersion: 'latest',

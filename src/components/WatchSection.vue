@@ -1,5 +1,5 @@
 <template>
-  <section class="watch-section" id="watch">
+  <section id="watch" class="watch-section">
     <div class="watch-container">
       <div class="watch-visual fade-in">
         <div class="watch-mockup">

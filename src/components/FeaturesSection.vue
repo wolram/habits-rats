@@ -1,5 +1,5 @@
 <template>
-  <section class="features" id="features">
+  <section id="features" class="features">
     <div class="section-header fade-in">
       <div class="section-label">✨ Recursos</div>
       <h2 class="section-title">

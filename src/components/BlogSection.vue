@@ -1,5 +1,5 @@
 <template>
-  <section class="blog" id="blog">
+  <section id="blog" class="blog">
     <div class="section-header fade-in">
       <div class="section-label">📝 Blog</div>
       <h2 class="section-title">

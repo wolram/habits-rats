@@ -3,7 +3,7 @@
     <div class="bg-grid"></div>
     <AppNavigation />
 
-    <main class="container" v-if="post">
+    <main v-if="post" class="container">
       <article class="blog-post fade-in">
         <header class="post-header">
           <div class="post-meta-top">
@@ -34,7 +34,7 @@
       </article>
     </main>
 
-    <main class="container error-container" v-else>
+    <main v-else class="container error-container">
       <h1>Artigo não encontrado</h1>
       <p>O post que você está procurando não existe ou foi removido.</p>
       <router-link to="/blog" class="btn btn-secondary">Voltar ao Blog</router-link>

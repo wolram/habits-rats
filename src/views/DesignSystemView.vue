@@ -107,7 +107,7 @@
           v-for="typo in typographyScale"
           :key="typo.name"
           :label="typo.label"
-          :className="typo.className"
+          :class-name="typo.className"
           :text="typo.text"
         />
       </section>
@@ -273,6 +273,30 @@
 export default {
   name: 'DesignSystemView',
 
+  components: {
+    ColorCard: {
+      props: ['name', 'variable', 'hex'],
+      template: `
+        <div class="color-card">
+          <div class="color-swatch" :style="{ background: hex }"></div>
+          <h4>{{ name }}</h4>
+          <code>{{ variable }}</code>
+          <code>{{ hex }}</code>
+        </div>
+      `,
+    },
+
+    TypographyExample: {
+      props: ['label', 'className', 'text'],
+      template: `
+        <div class="typo-example">
+          <div class="label">{{ label }}</div>
+          <div :class="className">{{ text }}</div>
+        </div>
+      `,
+    },
+  },
+
   data() {
     return {
       backgrounds: [
@@ -409,30 +433,6 @@ export default {
       if (element) {
         element.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
-    },
-  },
-
-  components: {
-    ColorCard: {
-      props: ['name', 'variable', 'hex'],
-      template: `
-        <div class="color-card">
-          <div class="color-swatch" :style="{ background: hex }"></div>
-          <h4>{{ name }}</h4>
-          <code>{{ variable }}</code>
-          <code>{{ hex }}</code>
-        </div>
-      `,
-    },
-
-    TypographyExample: {
-      props: ['label', 'className', 'text'],
-      template: `
-        <div class="typo-example">
-          <div class="label">{{ label }}</div>
-          <div :class="className">{{ text }}</div>
-        </div>
-      `,
     },
   },
 };

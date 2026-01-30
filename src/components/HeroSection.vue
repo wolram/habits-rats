@@ -1,5 +1,5 @@
 <template>
-  <section class="hero" id="home">
+  <section id="home" class="hero">
     <div class="hero-container">
       <div class="hero-content">
         <div class="hero-badge">
@@ -41,8 +41,8 @@
                 <transition-group name="fade">
                   <div
                     v-for="(image, index) in screenshots"
-                    :key="image"
                     v-show="currentImageIndex === index"
+                    :key="image"
                     class="carousel-slide"
                   >
                     <img :src="image" :alt="`Screenshot ${index + 1}`" />
