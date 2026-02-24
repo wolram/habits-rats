@@ -1,94 +1,56 @@
-# 🐭 HabitRats Website
+# HabitRats — Turn habits into visible progress with gamification
 
-> Transforme hábitos em progresso visível com rastreamento estilo GitHub + gamificação + Apple Watch
+A landing page and marketing website for HabitRats, a habit-tracking app featuring GitHub-style heatmaps, gamification (XP, levels, badges, streaks), and Apple Watch integration.
 
-Este é um projeto Vue.js 3 profissional, organizado e modularizado, projetado para ser escalável e fácil de manter.
+## Features
 
----
+- GitHub-inspired daily progress heatmap
+- Gamification system with XP, levels, badges, and streaks
+- Apple Watch quick check-in support
+- Integrated blog with health and productivity posts
+- Fully responsive design (mobile, tablet, desktop)
+- Design system documentation
 
-## 📖 Documentação Rápida
+## Tech Stack
 
-### 🚀 Começar
+- **Vue.js 3.4** — Frontend framework
+- **Vue Router 4** — Client-side routing with lazy loading
+- **Vite 5** — Build tool and dev server
+- **ESLint + Prettier** — Code quality and formatting
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+
+### Install and Run
 
 ```bash
 npm install
-npm run dev      # Desenvolvimento local
-npm run build    # Build para produção
-npm run preview  # Pré-visualização do build
-npm run lint     # Verificar erros de código
-npm run format   # Formatar código com Prettier
+npm run dev       # Local development
+npm run build     # Production build
+npm run preview   # Preview production build
+npm run lint      # Lint code
+npm run format    # Format code with Prettier
 ```
 
-### 📚 Documentação
+### Deploy
 
-| Arquivo                            | Propósito                                  |
-| ---------------------------------- | ------------------------------------------ |
-| [docs/SUMMARY.md](docs/SUMMARY.md) | 📊 Resumo executivo + status de atividades |
-| [docs/DEPLOY.md](docs/DEPLOY.md)   | 🚀 Guia de deployment em produção          |
-| [docs/STATUS.md](docs/STATUS.md)   | 🔍 Status técnico detalhado + métricas     |
+Run `npm run build` and upload the `dist/` folder to any static hosting provider (Vercel, Netlify, GitHub Pages).
 
----
-
-## ✨ Recursos
-
-- 📊 **Heatmap Visual** - Inspirado no GitHub, mostra progresso diário
-- 🎮 **Gamificação** - XP, níveis, badges e streaks
-- ⌚ **Apple Watch** - Check-in rápido do pulso
-- 📝 **Blog Integrado** - 18 posts sobre saúde e produtividade
-- 🎨 **Design System** - Documentação completa de componentes e estilos
-- 📱 **100% Responsivo** - Mobile, tablet, desktop
-- ⚡ **Performance** - Otimizado para Vite e Vue 3
-
----
-
-## 🛠️ Tech Stack
-
-| Tecnologia   | Versão | Uso                      |
-| ------------ | ------ | ------------------------ |
-| Vue.js       | 3.4+   | Framework frontend       |
-| Vue Router   | 4.0+   | Gerenciamento de rotas   |
-| Vite         | 5.1+   | Build tool               |
-| ESLint       | 8.0+   | Qualidade de código      |
-| Prettier     | 3.0+   | Formatação de código     |
-
----
-
-## 📁 Estrutura de Pastas (Arquitetura Profissional)
+## Project Structure
 
 ```
-habitrats-website/
-├── src/
-│   ├── main.js          (Entry point)
-│   ├── App.vue          (Root component)
-│   ├── router/          (Configuração de rotas)
-│   ├── views/           (Páginas: Home, Blog, DesignSystem)
-│   ├── components/      (Componentes modulares: Hero, Pricing, etc.)
-│   └── assets/          (CSS global, imagens, logos)
-├── docs/                (Documentação do projeto)
-├── public/              (Assets estáticos)
-├── index.html           (HTML main)
-├── vite.config.js       (Config Vite)
-└── package.json         (Dependencies & Scripts)
+src/
+├── main.js          # Entry point
+├── App.vue          # Root component
+├── router/          # Route configuration
+├── views/           # Pages (Home, Blog, DesignSystem)
+├── components/      # Modular components (Hero, Pricing, etc.)
+└── assets/          # Global CSS, images, logos
 ```
 
----
+## License
 
-## 🚀 Deploy
-
-O projeto está configurado para ser buildado via Vite. Basta rodar `npm run build` e fazer o upload da pasta `dist/` para qualquer provedor de hospedagem estática (Vercel, Netlify, GitHub Pages).
-
----
-
-## 📋 Checklist de Qualidade
-
-- [x] Arquitetura modular (Views/Components)
-- [x] Roteamento funcional (Vue Router)
-- [x] Linting e Formatação (ESLint/Prettier)
-- [x] SEO otimizado
-- [x] Performance otimizada (Lazy loading de rotas)
-
----
-
-## 📄 Licença
-
-© 2026 HabitRats. Todos os direitos reservados.
+All rights reserved.
